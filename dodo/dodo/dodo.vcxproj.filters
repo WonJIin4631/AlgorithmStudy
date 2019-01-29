@@ -18,5 +18,11 @@
     <ClCompile Include="t14.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="t15.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="t16.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
