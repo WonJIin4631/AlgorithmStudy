@@ -48,10 +48,16 @@
     <ClCompile Include="bj1182.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="bj16235.cpp">
+    <ClCompile Include="bj2505.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="bj2505.cpp">
+    <ClCompile Include="bj2504.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bj2493.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bj3986.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
