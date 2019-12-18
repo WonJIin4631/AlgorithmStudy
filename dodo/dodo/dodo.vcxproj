@@ -146,6 +146,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj10026.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1260.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj12851.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj13459.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj14502.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj14890.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj14891.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj15787.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj16462.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1697.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj16985.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17140.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17143.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17144.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1766.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17779.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17822.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17825.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1946.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1996.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj2178.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj3197.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj4796.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj7576.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj9663.cpp" />
     <ClCompile Include="bj1018.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
