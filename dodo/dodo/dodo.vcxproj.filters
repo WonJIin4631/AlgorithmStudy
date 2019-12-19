@@ -156,79 +156,19 @@
     <ClCompile Include="bj1715.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1260.cpp">
+    <ClCompile Include="boj16929.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1697.cpp">
+    <ClCompile Include="boj2217.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1766.cpp">
+    <ClCompile Include="boj15662.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1946.cpp">
+    <ClCompile Include="boj11404cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj1996.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj2178.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj3197.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj4796.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj7576.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj9663.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj12851.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj13459.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj14502.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj14890.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj14891.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj15787.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj16462.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj16985.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17140.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17143.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17144.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17779.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17822.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj17825.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Documents\Visual Studio 2015\Projects\studty1\studty1\boj10026.cpp">
+    <ClCompile Include="boj11048.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
