@@ -16,58 +16,72 @@ int island_Cnt = 0;
 vector<pair<int, int>> island[7];
 int dx[] = { 0,0,1,-1 };
 int dy[] = { -1,1,0,0 };
-int distIsland[6][6];
+int distIsland[7][7];
 int check[7];
 int ans = INF;
+int parent[7];
 /*
 섬의개수 최대 6개
 */
 queue<pair<int, int>> q;
 
 
-void prim(int n) {
+int find(int n) {
+	if (parent[n] == n) {
+		return n;
+	}
+	else {
+		return find(parent[n]);
+	}
+}
 
+void merge(int a, int b) {
+	a = find(a);
+	b = find(b);
+	parent[b] = a;
+}
+void get_Dist() {
+	vector<pair<int, pair<int, int>>> info;
 	for (int i = 1; i <= island_Cnt; i++) {
 		for (int j = 1; j <= island_Cnt; j++) {
-			cout << distIsland[i][j] << ' ';
-		}
-		cout << '\n';
-	}
-	check[n] = 1;
-	priority_queue<pii, vector<pii>, greater<pii>> pq;
-	for (int i = 1; i <= island_Cnt; i++) {
-		if (distIsland[n][i] != INF) {
-			pq.push(pii(distIsland[n][i],i ));
-		}
-	}
-	int val = 0;
-	while (!pq.empty()) {
-		int cur = pq.top().second;
-		int cost = pq.top().first;
-		pq.pop();
-		if (check[cur] == 1)
-			continue;
-		check[cur] = 1;
-		val += cost;
-		for (int i = 1; i <= island_Cnt; i++) {
-			if (distIsland[cur][i] != INF) {
-				int next = i;
-				int nextcost = distIsland[cur][i];
-				pq.push(pii(nextcost, next));
+			if (distIsland[i][j] != INF) {
+				info.push_back(make_pair(distIsland[i][j], make_pair(i, j)));
 			}
 		}
 	}
-	bool flag = true;
-	for (int i = 1; i <= island_Cnt; i++) {
-		if (check[i] == 0) {
-			flag = false;
-		}
-		cout << check[i] << ' ';
+	sort(info.begin(), info.end());
+	for (int i = 1; i < island_Cnt; i++) {
+		parent[i] = i;
 	}
-	if (val != 0 && flag)
-		ans = min(ans, val);
+	int val = 0;
+	for (int i = 1; i <= 2; i++) {
+		for (int j = 0; j < info.size(); j++) {
+			int from = info[j].second.first;
+			int to = info[j].second.second;
+			if (find(from) != find(to)) {
+				merge(from, to);
+				if (i == 1) {
+					val += info[j].first;
+				}
+			}
+		}
+	}
+	int a = parent[1];
+	bool flag = true;
+	for (int i = 2; i <= island_Cnt; i++) {
+		int b = find(i);
+		if (a != b) {
+			flag = false;
+			break;
+		}
+	}
+	if (flag) {
+		cout << val << '\n';
+	}
+	else {
+		cout << -1 << '\n';
+	}
 }
-
 void connect() {
 	for (int i = 1; i <= island_Cnt; i++) {
 		for (int j = 0; j < island[i].size(); j++) {
@@ -149,12 +163,8 @@ void solve() {
 	divIsland();
 	connect();
 
-	cout << island_Cnt << '\n';
-	prim(1);
-	if (ans != INF)
-		cout << ans << '\n';
-	else
-		cout << -1 << '\n';
+	get_Dist();
+	
 }
 int main() {
 	cin >> N >> M;
@@ -163,8 +173,8 @@ int main() {
 			cin >> map[i][j];
 		}
 	}
-	for (int i = 0; i < 6; i++) {
-		for (int j = 0; j < 6; j++) {
+	for (int i = 1; i < 7; i++) {
+		for (int j = 1; j <7; j++) {
 			distIsland[i][j] = INF;
 		}
 	}

@@ -14,6 +14,7 @@ prim
 
 kruskal
 간선이 적으면 크루스칼이 적합
+
 */
 
 typedef pair<int, int> pii;
