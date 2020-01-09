@@ -1,33 +1,21 @@
-#include<iostream>
-#include<math.h>
-using namespace std;
-
-int main() {
+#include<cstdio>
+int main(void) {
 	int T;
-	cin >> T;
+	scanf("%d", &T);
 	for (int t = 1; t <= T; t++) {
 		long long n;
-		cin >> n;
-		long long sum = 1;
-		int powNum = 1;
-		if (n == 1) {
-			cout << "Bob" << '\n';
+		scanf("%llu", &n);
+		int check = 0;
+		long long turn = 1;
+		long long mul = 1;
+		while (turn < n) {
+			if (!check)
+				mul *= 4;
+			turn += mul;
+			check = !check;
 		}
-		else {
-			while (true)
-			{
-				if (n < sum) {
-					if (powNum % 2 == 0)
-						cout << '#' << t << ' ' << "Alice" << '\n';
-					else
-						cout << '#' << t << ' ' << "Bob" << '\n';
-					break;
-				}
-				sum += pow(2, powNum);
-				cout << sum << ' ' << pow(2, powNum) << ' ' << powNum << '\n';
-				powNum++;
-			}
-		}
+		printf("#%d %s\n", t, check ? "Alice" : "Bob");
+
 	}
 	return 0;
 }
