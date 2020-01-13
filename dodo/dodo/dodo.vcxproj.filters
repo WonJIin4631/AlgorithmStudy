@@ -294,5 +294,17 @@
     <ClCompile Include="prg60060.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="swe5432.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="swe3347.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="prg42898.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="prg43105.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
