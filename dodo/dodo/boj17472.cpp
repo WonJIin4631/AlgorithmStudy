@@ -40,7 +40,46 @@ void merge(int a, int b) {
 	b = find(b);
 	parent[b] = a;
 }
+void get_ans(int idx, int sum, int cnt) {
+	bool flag = true;
+	for (int i = 1; i <= island_Cnt; i++) {
+		if (check[i] == 0) {
+			flag = false;
+			break;
+		}
+	}
+	if (flag) {
+		ans = min(sum, ans);
+		return;
+	}
+	else {
+
+		for (int i = 1; i <= island_Cnt; i++) {
+			if (check[i] == 0) {
+				if (distIsland[idx][i] != INF) {
+					check[i] = 1;
+					get_ans(i, sum + distIsland[idx][i], cnt + 1);
+					check[i] = 0;
+				}
+			}
+		}
+	}
+}
 void get_Dist() {
+	/*
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < M; j++) {
+			cout << map[i][j] << ' ';
+		}
+		cout << '\n';
+	}
+	for (int i = 1; i <= island_Cnt; i++) {
+		for (int j = 1; j <= island_Cnt; j++) {
+			cout << distIsland[i][j] << ' ';
+		}
+		cout << '\n';
+	}
+	*/
 	vector<pair<int, pair<int, int>>> info;
 	for (int i = 1; i <= island_Cnt; i++) {
 		for (int j = 1; j <= island_Cnt; j++) {
@@ -74,6 +113,9 @@ void get_Dist() {
 			flag = false;
 			break;
 		}
+	}
+	for (int i = 1; i <= island_Cnt; i++) {
+		cout << parent[i] << '\n';
 	}
 	if (flag) {
 		cout << val << '\n';
@@ -164,7 +206,7 @@ void solve() {
 	connect();
 
 	get_Dist();
-	
+
 }
 int main() {
 	cin >> N >> M;
@@ -174,7 +216,7 @@ int main() {
 		}
 	}
 	for (int i = 1; i < 7; i++) {
-		for (int j = 1; j <7; j++) {
+		for (int j = 1; j < 7; j++) {
 			distIsland[i][j] = INF;
 		}
 	}

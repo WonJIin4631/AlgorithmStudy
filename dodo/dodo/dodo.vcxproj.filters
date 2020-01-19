@@ -342,5 +342,14 @@
     <ClCompile Include="boj17143.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="swe8822.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="swe8998.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="swe6109.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
