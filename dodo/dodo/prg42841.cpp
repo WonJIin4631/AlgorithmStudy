@@ -14,7 +14,6 @@ int solution(vector<vector<int>> baseball) {
 			continue;
 		if (num[0] == num[1] || num[1] == num[2] || num[2] == num[0])
 			continue;
-
 		for (int j = 0; j <baseball.size(); j++) {
 			s = 0; b = 0;
 			baseNum = to_string(baseball[j][0]);
