@@ -17,8 +17,8 @@ using namespace std;
 처음 문제풀때-> 말을 기준으로 했음 ->처리할게 많아서 복잡함
 
 주어진 이동 조건에 맞게 이동한다.
-말의 위치를 알수 있게 2차원 배열 선언
-2차원 배열선언이유는 그자리에 있는 말이 어떤 순서대로 있는지 파악하기 위해
+말의 위치를 알수 있게 3차원 배열 선언
+3차원 배열선언이유는 그자리에 있는 말이 어떤 순서대로 있는지 파악하기 위해
 움직일 말이 몇번째 높이에 있는지 중요
 움직일때 높이 ~ size()-1까지 다음 칸으로 이동 하고 빼준다
 */
@@ -89,7 +89,9 @@ void moveMal(int idx) {
 	if (nx >= 1 && nx <= N&&ny >= 1 && ny <= N) {
 		//다음칸이 흰색
 		if (map[ny][nx] == 0) {
+			//몇개가 이동했는지 확인
 			int cnt = 0;
+			//이동할 말과 위에있는 말을 다음 위치로 이동
 			for (int i = h; i < malMap[cy][cx].size(); i++) {
 				int temp = malMap[cy][cx][i];
 				mal[temp].x = nx;
@@ -97,6 +99,7 @@ void moveMal(int idx) {
 				malMap[ny][nx].push_back(temp);
 				cnt++;
 			}
+			//이동한 말의 개수만큼 원래의 위치에서 제거
 			for (int i = 0; i < cnt; i++) {
 				malMap[cy][cx].pop_back();
 			}
@@ -123,6 +126,7 @@ void moveMal(int idx) {
 			int nnx = cx + dx[ncd];
 			int nny = cy + dy[ncd];
 			mal[idx].dir = ncd;
+			//방향만 바꾸고 체스판에서 벗어나지 않거나 다음칸이 파랑색이 아닐때 이동
 			if (nnx >= 1 && nnx <= N&&nny >= 1 && nny <= N) {
 				if (map[nny][nnx] != 2) {
 					moveMal(idx);
@@ -130,6 +134,7 @@ void moveMal(int idx) {
 			}
 		}
 	}
+	//벗어날경우
 	else {
 		int ncd = change_dir(cd);
 		int nnx = cx + dx[ncd];
@@ -142,6 +147,7 @@ void moveMal(int idx) {
 		}
 	}
 }
+//말의 위치에 몇개가 쌓여있는지 확인
 bool check_fin() {
 	for (int i = 1; i <= K; i++) {
 		int x = mal[i].x;
