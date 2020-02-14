@@ -546,5 +546,8 @@
     <ClCompile Include="prg49994.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="prg42886.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
