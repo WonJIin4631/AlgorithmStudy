@@ -1,65 +1,38 @@
 #include <string>
 #include <vector>
-#include<stack>
 #include<iostream>
 using namespace std;
 
-bool check(string s) {
-	int cnt = 0;
-	for (int i = 0; i < s.length(); i++) {
-		if (s[i] == '(')
-			cnt++;
-		else if (s[i] == ')')
-			cnt--;
-		if (cnt < 0)
-			return false;
-	}
-	return true;
-}
 string solution(string p) {
-	vector<int> v;
-	string s;
-	stack<int> st;
 	string answer = "";
-	if (check) {
-		answer = p;
-	}
-	else {
-		int open = 0;
-		int close = 0;
-		bool reverse = false;
-		for (int i = 0; i < p.length(); i++) {
-			if (p[i] == '(')
-				open++;
-			else
-				close++;
-			if (open == close) {
-				if (reverse) {
-					if (p[i] == '(') {
-						answer += ')';
-						reverse = false;
-					}
-				}
-				else {
-					if (p[i] == ')')
+	int l = 0, r = 0; 
+	bool check = false; 
+	if (p.length() == 0) return "";
+	for (int i = 0; i < p.length(); i++) {
+		if (p[i] == '(') 
+			l++;
+		if (p[i] == ')') 
+			r++;
+		if (r > l) 
+			check = true;
+		if (l== r) {
+			if (check) { 
+				answer += '(';
+				answer += solution(p.substr(i + 1, p.length() - i - 1));
+				answer += ')';
+				for (int j = 1; j < i; j++) {
+					if (p[j] == ')') 
+						answer += '(';
+					if (p[j] == '(') 
 						answer += ')';
 				}
-
+				return answer;
 			}
-			else if (open > close) {
-				if (p[i] == '(')
-					answer += '(';
-				else
-					answer += ')';
-			}
-			else if (open < close) {
-				reverse = true;
-				if (p[i] == ')')
-					answer += '(';
-				else
-					answer += ')';
+			else { 
+				answer += p.substr(0, i + 1);
+				answer += solution(p.substr(i + 1, p.length() - i - 1));
+				return answer;
 			}
 		}
 	}
-	return answer;
 }
