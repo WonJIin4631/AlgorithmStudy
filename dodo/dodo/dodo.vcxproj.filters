@@ -609,5 +609,14 @@
     <ClCompile Include="grm49104.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="prg12899.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="prg17687.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="prg42628.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
