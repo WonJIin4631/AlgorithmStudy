@@ -621,7 +621,19 @@
     <ClCompile Include="prg12952.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="grm49092.cpp">
+    <ClCompile Include="grm49077.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="grm43269.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="grm49091.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="grm43070.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj12101.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
