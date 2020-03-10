@@ -1,104 +1,47 @@
 #include<iostream>
-#include<math.h>
 #include<queue>
 using namespace std;
 /*
-빨간, 파란 구슬을 상 하 좌 우로 기울여서 구멍에 빠지게 한다
-동시에 두구슬이 빠지게 되면 안된다.
-두 구슬은 동시에 같은 칸에 있을수 없다.
-10번 이하로 움직여서 빼낼수 있으면 1 아니면 0
-
-현재까지 움직인 횟수,파란구슬위치,빨간구슬위치 의 정보를 가지고 모든경우 탐색
-동시에 같은칸에 있을경우-> 원래 있던위치와 이동한 위치의 거리 차를 비교하여 값이 높게온것이 반대방향으로 이동
-10번까지계산하지 않아도 이전까지 움직인 곳에 두 구슬이 다시 방문한경우는 찾지 않음-> 계속 똑같은 결과가 나올거같음
+수빈이는 걷거나 순간이동을 할수 있다, 1초후 x-1,x+1로 이동 순간이동 하는 경우에는 2*X 위치로 이동
+수빈이를 만나는 가장 빠른 시간이 몇 초인지 구하기
+위치별로 시간을 저장할 배열을 선언
+수빈이 현재 자리에서 순간이동 할수 있는 위치를 다방문한다.순간이동을할때 지금 시간과 그자리의 시간을 비교해야됨
+순간이동 끝난뒤 앞,뒤로 이동 이동할때도 시간을 비교하고 다시 순간이동 반복해서 연산
 */
-int N, M;
-char map[11][11];
-bool visit[11][11][11][11] = { false };
-int rbx, rby, bbx, bby;
-int dx[] = { 0,0,-1,1 };
-int dy[] = { -1,1,0,0 };
-struct info {
-	int rbx, rby, bbx, bby;
-};
-bool ans = false;
+int N, K;
+int timeList[100002];	
+typedef pair<int, int> pii;
 int main() {
-	cin >> N >> M;
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			cin >> map[i][j];
-			if (map[i][j] == 'R') {
-				map[i][j] = '.';
-				rbx = j, rby = i;
-			}
-			if (map[i][j] == 'B') {
-				map[i][j] = '.';
-				bbx = j, bby = i;
-			}
-		}
+	cin >> N >> K;
+	for (int i = 0;i <= 100000; i++) {
+		timeList[i] = 987654321;
 	}
-	visit[rby][rbx][bby][bbx] = true;
-	queue<info> q;
-	q.push({ rbx,rby,bbx,bby });
-	int time = 0;
-	while (true) {
-		//9번째 이동까지 확인해야됨 10번째 이동한 위치가 구멍이여야해서
-		if (time >= 10)
-			break;
-		int qsz = q.size();
-		bool flag = false;
-		for (int i = 0; i < qsz; i++) {
-			int crbx, crby, cbbx, cbby;
-			crbx = q.front().rbx, crby = q.front().rby, cbbx = q.front().bbx, cbby = q.front().bby;
-			q.pop();
-			//4방향
-			for (int k = 0; k < 4; k++) {
-				int nrbx=crbx, nrby=crby, nbbx=cbbx, nbby=cbby;
-				while (true){
-					if (map[nrby + dy[k]][nrbx+dx[k]] == '#'||map[nrby][nrbx]=='O')
-						break;
-					nrbx += dx[k];
-					nrby += dy[k];
-				}
-				while (true) {
-					if (map[nbby + dy[k]][nbbx + dx[k]] == '#' || map[nbby][nbbx] == 'O')
-						break;
-					nbbx += dx[k];
-					nbby += dy[k];
-				}
-
-				if (map[nbby][nbbx] != 'O'&&map[nrby][nrbx] == 'O') {
-					flag = true;
-					break;
-				}
-				if (nrbx == nbbx && nrby == nbby) {
-					if (map[nbby][nbbx] == 'O')
-						continue;
-					//이동한 위치와 원래 위치의 거리차를 구해 더멀리 이동한게 다른칸으로 한칸 이동
-					if (abs(crbx - nrbx) + abs(crby - nrby) > abs(cbbx - nbbx) + abs(cbby - nbby)) {
-						nrbx -= dx[k];
-						nrby -= dy[k];
-					}
-					else {
-						nbbx -= dx[k];
-						nbby -= dy[k];
-					}
-				}
-				if (!visit[nrby][nrbx][nbby][nbbx]) {
-					visit[nrby][nrbx][nbby][nbbx] = true;
-					q.push({ nrbx,nrby,nbbx,nbby });
-				}
-			}
-			if (flag) {
+	queue<pii> q;
+	q.push(pii(N, 0));
+	while (!q.empty()){
+		int cur = q.front().first;
+		int time = q.front().second;
+		q.pop();
+		if (timeList[cur] < time)
+			continue;
+		timeList[cur] = time;
+		int mul = 2;
+		while (true){
+			if (cur*mul>100000)
 				break;
+			if (timeList[cur*mul] > time) {
+				timeList[cur*mul] = time;
+				q.push(pii(cur*mul, time));
 			}
+			else
+				break;
+			mul *= 2;
 		}
-		if (flag) {
-			ans = true;
-			break;
-		}
-		time++;
+		if ( cur + 1 <= 100000)
+			q.push(pii(cur + 1, time + 1));
+		if (cur - 1 >= 0)
+			q.push(pii(cur - 1, time + 1));
 	}
-	cout << ans << '\n';
+	cout << timeList[K] << '\n';
 	return 0;
 }
