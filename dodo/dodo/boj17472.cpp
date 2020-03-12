@@ -5,42 +5,56 @@
 #include<functional>
 using namespace std;
 
+/*
+N x M 크기의 지도
+다리는 바다에만 건설할수 있고 길이는 2이상이다. 다리는 직선이다. 다리가 교차할수 있다.
+다리를 설치하여 모든 섬이 연결되도록한다. 최소의 다리 길이를 출력한다.
+섬의 개수는 최대 6개
+1. 섬을 구분짓기
+2. 섬끼리의 거리를 확인
+3. MST로 최소 거리를 찾기
+
+일단 섬 구역 찾기 1
+섬의개수 최대 6개
+*/
 #define INF 987654321
 typedef pair<int, int > pii;
-
 
 int N, M;
 int map[11][11];
 int visit[11][11];
 int island_Cnt = 0;
-vector<pair<int, int>> island[7];
+vector<pair<int, int>> island[7];//섬외각좌표
 int dx[] = { 0,0,1,-1 };
 int dy[] = { -1,1,0,0 };
-int distIsland[7][7];
-int check[7];
-int ans = INF;
-int parent[7];
-/*
-섬의개수 최대 6개
-*/
+int d_Island[7][7];
+int check[7] = { 0 };
+int ans = -1;
 queue<pair<int, int>> q;
 
-
-int find(int n) {
-	if (parent[n] == n) {
-		return n;
+void MST() {
+	priority_queue<pii,vector<pii>,greater<pii>> pq;
+	for (int i = 1; i <= island_Cnt; i++) {
+		if (d_Island[1][i] != INF) {
+			pq.push(pii(d_Island[1][i], i));
+		}
 	}
-	else {
-		return find(parent[n]);
+	check[1] = 1;
+	int temp = 0;
+	while (!pq.empty()){
+		int cur = pq.top().second;
+		int dist = pq.top().first;
+		pq.pop();
+		if (check[cur])
+			continue;
+		temp += dist;
+		check[cur] = 1;
+		for (int i = 1; i <= island_Cnt; i++) {
+			if (d_Island[cur][i] != INF) {
+				pq.push(pii(d_Island[cur][i], i));
+			}
+		}
 	}
-}
-
-void merge(int a, int b) {
-	a = find(a);
-	b = find(b);
-	parent[b] = a;
-}
-void get_ans(int idx, int sum, int cnt) {
 	bool flag = true;
 	for (int i = 1; i <= island_Cnt; i++) {
 		if (check[i] == 0) {
@@ -48,178 +62,105 @@ void get_ans(int idx, int sum, int cnt) {
 			break;
 		}
 	}
-	if (flag) {
-		ans = min(sum, ans);
-		return;
-	}
-	else {
+	if (flag)
+		ans = temp;
+}
 
-		for (int i = 1; i <= island_Cnt; i++) {
-			if (check[i] == 0) {
-				if (distIsland[idx][i] != INF) {
-					check[i] = 1;
-					get_ans(i, sum + distIsland[idx][i], cnt + 1);
-					check[i] = 0;
-				}
-			}
-		}
-	}
-}
-void get_Dist() {
-	/*
-	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {
-			cout << map[i][j] << ' ';
-		}
-		cout << '\n';
-	}
+void connect_land() {
 	for (int i = 1; i <= island_Cnt; i++) {
 		for (int j = 1; j <= island_Cnt; j++) {
-			cout << distIsland[i][j] << ' ';
-		}
-		cout << '\n';
-	}
-	*/
-	vector<pair<int, pair<int, int>>> info;
-	for (int i = 1; i <= island_Cnt; i++) {
-		for (int j = 1; j <= island_Cnt; j++) {
-			if (distIsland[i][j] != INF) {
-				info.push_back(make_pair(distIsland[i][j], make_pair(i, j)));
-			}
+			d_Island[i][j] = INF;
 		}
 	}
-	sort(info.begin(), info.end());
-	for (int i = 1; i < island_Cnt; i++) {
-		parent[i] = i;
-	}
-	int val = 0;
-	for (int i = 1; i <= 2; i++) {
-		for (int j = 0; j < info.size(); j++) {
-			int from = info[j].second.first;
-			int to = info[j].second.second;
-			if (find(from) != find(to)) {
-				merge(from, to);
-				if (i == 1) {
-					val += info[j].first;
-				}
-			}
-		}
-	}
-	int a = parent[1];
-	bool flag = true;
-	for (int i = 2; i <= island_Cnt; i++) {
-		int b = find(i);
-		if (a != b) {
-			flag = false;
-			break;
-		}
-	}
-	for (int i = 1; i <= island_Cnt; i++) {
-		cout << parent[i] << '\n';
-	}
-	if (flag) {
-		cout << val << '\n';
-	}
-	else {
-		cout << -1 << '\n';
-	}
-}
-void connect() {
 	for (int i = 1; i <= island_Cnt; i++) {
 		for (int j = 0; j < island[i].size(); j++) {
 			int x = island[i][j].second;
 			int y = island[i][j].first;
-			for (int dir = 0; dir < 4; dir++) {
-				int nx = x;
-				int ny = y;
-				int dist = 0;
+			//4방향 조사
+			for (int k = 0; k < 4; k++) {
+				int nx = x + dx[k];
+				int ny = y + dy[k];;
+				int cnt = 0;
 				while (true) {
-					nx += dx[dir];
-					ny += dy[dir];
-					if (nx < 0 || ny < 0 || nx >= M || ny >= N || map[ny][nx] == i)
+					if (nx < 0 || ny < 0 || ny >= N || nx >= M)
 						break;
-					if (map[ny][nx] != 0 && map[ny][nx] != i) {
-						if (dist > 1) {
-							int to = map[ny][nx];
-							distIsland[i][to] = min(distIsland[i][to], dist);
-							distIsland[to][i] = min(distIsland[to][i], dist);
-							break;
+					if (map[ny][nx] == i)
+						break;
+					if (map[ny][nx] != 0) {
+						if (cnt > 1) {
+							if (d_Island[i][map[ny][nx]] > cnt) {
+								d_Island[i][map[ny][nx]] = cnt;
+								d_Island[map[ny][nx]][i] = cnt;
+							}
 						}
-						if (dist == 1)
-							break;
+						break;
 					}
-					dist++;
+					nx += dx[k];
+					ny += dy[k];
+					cnt++;
 				}
 			}
 		}
 	}
 }
-void BFS(int num) {
+void spread(int x, int y, int num) {
+	queue<pii> q;
+	visit[y][x] = 1;
+	q.push(pii(y, x));
 	while (!q.empty()) {
-		int x = q.front().second;
-		int y = q.front().first;
-		map[y][x] = num;
+		int cx = q.front().second;
+		int cy = q.front().first;
 		q.pop();
-		//주변에 물이있는지 확인
+		map[cy][cx] = num;
+		//주변에 물이 있으면 외각지역
 		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i];
-			int ny = y + dy[i];
-			if (nx >= 0 && ny >= 0 && nx < M&&ny < N) {
+			int nx = cx + dx[i];
+			int ny = cy + dy[i];
+			if (nx >= 0 && nx < M&&ny >= 0 && ny < N) {
 				if (map[ny][nx] == 0) {
-					island[num].push_back(make_pair(y, x));
+					island[num].push_back(pii(cy, cx));
 					break;
 				}
 			}
 		}
-
 		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i];
-			int ny = y + dy[i];
-			if (visit[ny][nx] == 0) {
-				if (nx >= 0 && ny >= 0 && nx < M&&ny < N) {
-					if (map[ny][nx] == 1) {
-						q.push(make_pair(ny, nx));
+			int nx = cx + dx[i];
+			int ny = cy + dy[i];
+			if (nx >= 0 && nx < M&&ny >= 0 && ny < N) {
+				if (map[ny][nx] == 1) {
+					if (visit[ny][nx] == 0) {
 						visit[ny][nx] = 1;
+						q.push(pii(ny, nx));
 					}
 				}
 			}
 		}
 	}
 }
-void divIsland() {
+void div_island() {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
-			if (visit[i][j] == 0) {
-				if (map[i][j] == 1) {
-					q.push(make_pair(i, j));
-					visit[i][j] = 1;
-					island_Cnt++;
-					BFS(island_Cnt);
+			if (map[i][j] == 1) {
+				if (visit[i][j] == 0) {
+					spread(j, i, ++island_Cnt);
 				}
 			}
 		}
 	}
 }
-
-void solve() {
-	divIsland();
-	connect();
-
-	get_Dist();
-
-}
-int main() {
+void init() {
 	cin >> N >> M;
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
 			cin >> map[i][j];
 		}
 	}
-	for (int i = 1; i < 7; i++) {
-		for (int j = 1; j < 7; j++) {
-			distIsland[i][j] = INF;
-		}
-	}
-	solve();
+}
+int main() {
+	init();
+	div_island();
+	connect_land();
+	MST();
+	cout << ans << '\n';
 	return 0;
 }
