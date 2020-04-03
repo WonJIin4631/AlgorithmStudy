@@ -9,40 +9,33 @@ using namespace std;
 int main() {
 	int N;
 	int P, T;
-	int turn = 1;
-	int st_p = 0;
-	int end_p = 0;
-	int curHand = 0;
-
-	int state = 1;
+	int t = 1;
+	int st = 0;
+	int end = 0;
+	int cnt = 0;
 	cin >> N >> P >> T;
-	while (true) {
-		curHand += state;
-		st_p = end_p;
-		end_p += curHand;
-		//TÂ÷·ÊÀÏ¶§ È®ÀÎ
-		if (end_p > 2 * N)
-			end_p -= (2 * N);
-		if (turn == T) {
-			st_p = (st_p + 1) / 2;
-			end_p = (end_p + 1) / 2;
-			if (st_p <= end_p) {
-				if (st_p < P && P <= end_p) {
-					cout << "Dehet YeonJwaJe ^~^" << '\n';
-					break;
-				}
-			}
-			else {
-				if (st_p < P || end_p >= P) {
-					cout << "Dehet YeonJwaJe ^~^" << '\n';
-					break;
-				}
-			}
-			cout << "Hing¡¦NoJam" << '\n';
-			break;
+	for (int i = 1; i< T + 1; i++) {
+		cnt += t;
+		st = end;
+		end += cnt;
+		if (cnt == 2 * N || (cnt == 1 && i != 1)) {
+			t = -t;
 		}
-		if (curHand == 2 * N || (turn != 1 && curHand == 1))
-			state *= -1;
-		turn++;
+		if (end > 2 * N)
+			end -= 2 * N;
+	}
+	st = (st + 1) / 2;
+	end = (end + 1) / 2;
+	if (st > end) {
+		if (P > st || P <= end)
+			cout << "Dehet YeonJwaJe ^~^" << '\n';
+		else
+			cout << "Hing...NoJam" << '\n';
+	}
+	else {
+		if(st < P && P <= end)
+			cout << "Dehet YeonJwaJe ^~^" << '\n';
+		else
+			cout << "Hing...NoJam" << '\n';
 	}
 }
