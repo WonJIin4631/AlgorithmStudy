@@ -5,12 +5,14 @@ using namespace std;
 int N;
 vector<int> ans;
 vector<int> v;
+bool flag = false;
 void solve(int idx,int sum,int cnt) {
-	if (sum %N==0 && cnt == N) {
+	if (sum %N==0&&sum!=0 && cnt == N) {
 		int temp = 0;
 		for (int i = 0; i < ans.size(); i++) {
 			cout << ans[i] << ' ';
 		}
+		flag = true;
 		exit(0);
 	}
 	if (cnt > N)
@@ -29,5 +31,7 @@ int main() {
 		v.push_back(n);
 	}
 	solve(0, 0, 0);
+	if (!flag)
+		cout << "-1" << '\n';
 	return 0;
 }
