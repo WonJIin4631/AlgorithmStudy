@@ -792,9 +792,6 @@
     <ClCompile Include="boj18442.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="boj10933.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="boj18790.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -808,6 +805,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="boj17822-2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj2232.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj10993.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj1062.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj4889.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
