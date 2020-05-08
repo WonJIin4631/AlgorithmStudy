@@ -122,7 +122,6 @@ public class BOJ15653 {
 					if(flag[1])
 						continue;
 					if (!visit[cry][crx][cby][cbx]) {
-						//System.out.println("push"+crx+ " "+cry+" "+cbx+" "+cby);
 						visit[cry][crx][cby][cbx] = true;
 						BInfo nInfo = new BInfo(crx, cry, cbx, cby);
 						q.add(nInfo);
