@@ -157,7 +157,7 @@ public class BOJ1938 {
 			}
 			time++;
 		}
-		System.out.println(-1);
+		System.out.println(0);
 	}
 	
 }
