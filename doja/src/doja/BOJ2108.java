@@ -31,7 +31,7 @@ public class BOJ2108 {
             }
         }
         Arrays.sort(numList);
-        System.out.println((int)Math.round((double)(avg/n))) ;
+        System.out.println((int)Math.round((double)(avg/n)));
         System.out.println(numList[n/2]);
         if(list.size()!= 0)
             System.out.println(list.get(0));
