@@ -42,7 +42,7 @@ void DFS(int x, int y, int dir, int move_num, int cnt) {
 int main() {
 	int ind = 0;
 	while (cin >> n >> m) {
-		ind++; 
+		ind++;
 		ans = 1000000;
 		char inp;
 		m_cnt = 0;
@@ -61,8 +61,8 @@ int main() {
 				for (int kk = 0; kk < 4; kk++) {
 					map[i][j] = '#';
 					DFS(i, j, kk, 1, 1);
-					for (int i = 1; i <= n; i++) {
-						for (int j = 1; j <= m; j++) {
+					for (int y = 1; y <= n; y++) {
+						for (int x = 1; x <= m; x++) {
 							map[i][j] = map_ref[i][j];
 						}
 					}
@@ -80,5 +80,4 @@ int main() {
 			}
 		}
 	}
-	return 0;
 }
