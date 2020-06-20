@@ -942,9 +942,6 @@
     <ClCompile Include="boj1966.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="boj1043.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="boj1904.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -967,6 +964,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="boj10816.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj1931.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
