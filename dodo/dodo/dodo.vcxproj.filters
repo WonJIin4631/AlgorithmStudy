@@ -1014,8 +1014,11 @@
     <ClCompile Include="boj6326.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="boj5557.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+=======
+>>>>>>> aa8f02f6840f1605aafd0a5856f59d39471705a2
   </ItemGroup>
 </Project>

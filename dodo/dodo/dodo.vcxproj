@@ -737,7 +737,10 @@
     <ClCompile Include="boj5397.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="boj5557.cpp" />
+=======
+>>>>>>> aa8f02f6840f1605aafd0a5856f59d39471705a2
     <ClCompile Include="boj6326.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
