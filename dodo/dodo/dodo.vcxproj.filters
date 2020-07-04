@@ -1,1024 +1,340 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="t14.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="t15.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="t16.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2309.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2178.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1463.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj3653.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1753.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1916.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1238.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1182.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2505.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2504.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2493.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj3986.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj16988.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj8979.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj16987.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj10819.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1700.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2529.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj16234.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj11728.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2003.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2438.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2439.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2440.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2441.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2442.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2443.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2444.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2445.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2446.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2447.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj2941.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1018.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1924.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1546.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1748.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj5525.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj14467.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj15905.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj17070.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj11559.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj3197.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj11279.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bj1715.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16929.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2217.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15662.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11048.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16988.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17821.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2146.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2503.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1890.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2578.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17938.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17940.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17838.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1015.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17485.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2644.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14499.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11726.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14620.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2294.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14226.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17836.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4929.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj6497.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10775.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17472.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17779.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1149.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15685.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe4008.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe2819.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe3459.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe1244.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg43162.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg62049.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe2117.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42587.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42895.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42488.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg49993.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg62048.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42884.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg43163.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg60060.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe5432.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe3347.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42898.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg43105.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42841.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42842.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe5643.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12907.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42861.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe1808.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15649.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15650.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15651.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15652.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15666.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17143.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe8822.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe8998.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="swe6109.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2583.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2665.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16953.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2056.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16504.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2979.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11729.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42626.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42885.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42860.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg60058.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg43165.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="PRG17679.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42579.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42839.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42897.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42583.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg43164.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42746.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42627.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42747.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18290.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9205.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2776.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg49189.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg49191.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg43237.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj3085.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj3184.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18186.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14890.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2110.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12978.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42890.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10448.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2231.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1648.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17471.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42578.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42586.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12914.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12980.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42888.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17837.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj13261.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj5213.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1535.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2884.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11724.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1541.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1874.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14503.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1946.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1389.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1932.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1197.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj6118.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prglv1-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prglv1-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prglv2-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prglv2-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prglv3-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prglv3-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12987.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg49994.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42886.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11727.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14889.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17141.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2606.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2667.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2193.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2211.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj13397.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1978.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2075.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11399.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2512.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1939.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1753.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2668.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10610.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm49076.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm43230.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm49104.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12899.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg17687.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg42628.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prg12952.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm49077.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm43269.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm49091.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="grm43070.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj12101.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj5014.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj12756.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj8895.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj13418.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9465.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16987.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1509.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2875.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16918.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1347.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10988.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10942.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1654.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj13459.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj13549.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2638.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1929.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16562.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2042.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj5569.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15663.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2573.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2661.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17140-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1149-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1935.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10597.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16568.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj3020.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj3190.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj8911.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10972.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16236.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17244.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17135.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1339.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11507.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11056.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2662.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18808.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1562.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4811.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4179.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1965.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1726.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9251.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1766.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16637.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18513.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj7785.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15991.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2174.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18442.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18790.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14502-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14891-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1328.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17822-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2232.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10993.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1062.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4889.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2533.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18352.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj16637-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15686.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2455.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9376.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4949.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18340.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj12100.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18353.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1600.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14889-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj3079.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15684.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11000.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj7576-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1633.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1003.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15486.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj18428.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9944.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2133.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17780.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj13460.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj3190-3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17142.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2346.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14890-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17143-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1074.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9328.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj17472-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4991.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1010.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4796-1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15666-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj15683.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11967.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2294-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11048-2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9084.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1966.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1904.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj4358.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2580.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj5397.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9461.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2931.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj19238.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10816.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1931.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2012.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj19236.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj9518.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2800.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11286.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11404.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1730.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj14939.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj5022.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj10835.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2210.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11052.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj1914.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj11722.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj2224.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="boj6326.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="boj5557.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-=======
->>>>>>> aa8f02f6840f1605aafd0a5856f59d39471705a2
+    <ClCompile Include="boj1003.cpp" />
+    <ClCompile Include="boj10835.cpp" />
+    <ClCompile Include="boj11286.cpp" />
+    <ClCompile Include="boj11722.cpp" />
+    <ClCompile Include="boj14939.cpp" />
+    <ClCompile Include="boj1730.cpp" />
+    <ClCompile Include="boj11052.cpp" />
+    <ClCompile Include="boj1914.cpp" />
+    <ClCompile Include="boj19236.cpp" />
+    <ClCompile Include="boj1931.cpp" />
+    <ClCompile Include="boj10597.cpp" />
+    <ClCompile Include="boj1062.cpp" />
+    <ClCompile Include="boj10816.cpp" />
+    <ClCompile Include="boj10993.cpp" />
+    <ClCompile Include="boj10942.cpp" />
+    <ClCompile Include="boj10448.cpp" />
+    <ClCompile Include="boj10610.cpp" />
+    <ClCompile Include="boj10775.cpp" />
+    <ClCompile Include="boj10972.cpp" />
+    <ClCompile Include="boj10988.cpp" />
+    <ClCompile Include="boj11000.cpp" />
+    <ClCompile Include="boj11056.cpp" />
+    <ClCompile Include="boj11399.cpp" />
+    <ClCompile Include="boj1149-2.cpp" />
+    <ClCompile Include="boj1149.cpp" />
+    <ClCompile Include="boj11507.cpp" />
+    <ClCompile Include="boj11724.cpp" />
+    <ClCompile Include="boj11726.cpp" />
+    <ClCompile Include="boj11727.cpp" />
+    <ClCompile Include="boj11729.cpp" />
+    <ClCompile Include="boj11967.cpp" />
+    <ClCompile Include="boj1197.cpp" />
+    <ClCompile Include="boj12100.cpp" />
+    <ClCompile Include="boj12101.cpp" />
+    <ClCompile Include="boj12756.cpp" />
+    <ClCompile Include="boj13261.cpp" />
+    <ClCompile Include="boj1328.cpp" />
+    <ClCompile Include="boj13397.cpp" />
+    <ClCompile Include="boj1339.cpp" />
+    <ClCompile Include="boj13418.cpp" />
+    <ClCompile Include="boj13459.cpp" />
+    <ClCompile Include="boj1347.cpp" />
+    <ClCompile Include="boj13549.cpp" />
+    <ClCompile Include="boj1389.cpp" />
+    <ClCompile Include="boj14226.cpp" />
+    <ClCompile Include="boj14499.cpp" />
+    <ClCompile Include="bj1018.cpp" />
+    <ClCompile Include="bj11279.cpp" />
+    <ClCompile Include="bj11559.cpp" />
+    <ClCompile Include="bj11728.cpp" />
+    <ClCompile Include="bj14467.cpp" />
+    <ClCompile Include="bj15905.cpp" />
+    <ClCompile Include="bj16234.cpp" />
+    <ClCompile Include="bj1546.cpp" />
+    <ClCompile Include="bj17070.cpp" />
+    <ClCompile Include="bj1715.cpp" />
+    <ClCompile Include="bj1748.cpp" />
+    <ClCompile Include="bj1924.cpp" />
+    <ClCompile Include="bj2003.cpp" />
+    <ClCompile Include="bj2438.cpp" />
+    <ClCompile Include="bj2439.cpp" />
+    <ClCompile Include="bj2440.cpp" />
+    <ClCompile Include="bj2441.cpp" />
+    <ClCompile Include="bj2442.cpp" />
+    <ClCompile Include="bj2443.cpp" />
+    <ClCompile Include="bj2444.cpp" />
+    <ClCompile Include="bj2445.cpp" />
+    <ClCompile Include="bj2446.cpp" />
+    <ClCompile Include="bj2447.cpp" />
+    <ClCompile Include="bj2529.cpp" />
+    <ClCompile Include="bj10819.cpp" />
+    <ClCompile Include="bj16987.cpp" />
+    <ClCompile Include="bj1182.cpp" />
+    <ClCompile Include="bj1238.cpp" />
+    <ClCompile Include="bj16988.cpp" />
+    <ClCompile Include="bj1700.cpp" />
+    <ClCompile Include="bj1753.cpp" />
+    <ClCompile Include="bj1463.cpp" />
+    <ClCompile Include="bj1916.cpp" />
+    <ClCompile Include="bj2178.cpp" />
+    <ClCompile Include="bj2309.cpp" />
+    <ClCompile Include="bj2493.cpp" />
+    <ClCompile Include="bj2504.cpp" />
+    <ClCompile Include="bj2505.cpp" />
+    <ClCompile Include="bj2941.cpp" />
+    <ClCompile Include="bj3197.cpp" />
+    <ClCompile Include="bj3653.cpp" />
+    <ClCompile Include="bj3986.cpp" />
+    <ClCompile Include="bj5525.cpp" />
+    <ClCompile Include="bj8979.cpp" />
+    <ClCompile Include="boj14502-2.cpp" />
+    <ClCompile Include="boj14503.cpp" />
+    <ClCompile Include="boj14620.cpp" />
+    <ClCompile Include="boj14889-2.cpp" />
+    <ClCompile Include="boj14889.cpp" />
+    <ClCompile Include="boj14890-2.cpp" />
+    <ClCompile Include="boj14890.cpp" />
+    <ClCompile Include="boj14891-2.cpp" />
+    <ClCompile Include="boj15666-2.cpp" />
+    <ClCompile Include="boj1509.cpp" />
+    <ClCompile Include="boj1535.cpp" />
+    <ClCompile Include="boj1541.cpp" />
+    <ClCompile Include="boj15486.cpp" />
+    <ClCompile Include="boj1562.cpp" />
+    <ClCompile Include="boj15649.cpp" />
+    <ClCompile Include="boj15650.cpp" />
+    <ClCompile Include="boj15651.cpp" />
+    <ClCompile Include="boj15652.cpp" />
+    <ClCompile Include="boj15666.cpp" />
+    <ClCompile Include="boj15683.cpp" />
+    <ClCompile Include="boj15684.cpp" />
+    <ClCompile Include="boj15685.cpp" />
+    <ClCompile Include="boj15686.cpp" />
+    <ClCompile Include="boj15991.cpp" />
+    <ClCompile Include="boj1600.cpp" />
+    <ClCompile Include="boj16236.cpp" />
+    <ClCompile Include="boj1633.cpp" />
+    <ClCompile Include="boj1648.cpp" />
+    <ClCompile Include="boj16504.cpp" />
+    <ClCompile Include="boj1654.cpp" />
+    <ClCompile Include="boj16562.cpp" />
+    <ClCompile Include="boj16568.cpp" />
+    <ClCompile Include="boj16637-2.cpp" />
+    <ClCompile Include="boj16637.cpp" />
+    <ClCompile Include="boj16918.cpp" />
+    <ClCompile Include="boj16953.cpp" />
+    <ClCompile Include="boj16987.cpp" />
+    <ClCompile Include="boj17135.cpp" />
+    <ClCompile Include="boj17140-2.cpp" />
+    <ClCompile Include="boj17141.cpp" />
+    <ClCompile Include="boj17142.cpp" />
+    <ClCompile Include="boj17143-2.cpp" />
+    <ClCompile Include="boj17143.cpp" />
+    <ClCompile Include="boj17244.cpp" />
+    <ClCompile Include="boj1726.cpp" />
+    <ClCompile Include="boj17471.cpp" />
+    <ClCompile Include="boj17472-2.cpp" />
+    <ClCompile Include="boj17472.cpp" />
+    <ClCompile Include="boj17485.cpp" />
+    <ClCompile Include="boj1015.cpp" />
+    <ClCompile Include="boj11048.cpp" />
+    <ClCompile Include="boj11404.cpp" />
+    <ClCompile Include="boj15662.cpp" />
+    <ClCompile Include="boj16929.cpp" />
+    <ClCompile Include="boj16988.cpp" />
+    <ClCompile Include="boj1753.cpp" />
+    <ClCompile Include="boj1766.cpp" />
+    <ClCompile Include="boj17779.cpp" />
+    <ClCompile Include="boj17780.cpp" />
+    <ClCompile Include="boj17821.cpp" />
+    <ClCompile Include="boj17822-2.cpp" />
+    <ClCompile Include="boj17836.cpp" />
+    <ClCompile Include="boj17837.cpp" />
+    <ClCompile Include="boj17838.cpp" />
+    <ClCompile Include="boj17938.cpp" />
+    <ClCompile Include="boj17940.cpp" />
+    <ClCompile Include="boj11048-2.cpp" />
+    <ClCompile Include="boj18186.cpp" />
+    <ClCompile Include="boj18290.cpp" />
+    <ClCompile Include="boj15663.cpp" />
+    <ClCompile Include="boj18340.cpp" />
+    <ClCompile Include="boj18352.cpp" />
+    <ClCompile Include="boj18353.cpp" />
+    <ClCompile Include="boj18428.cpp" />
+    <ClCompile Include="boj18442.cpp" />
+    <ClCompile Include="boj18513.cpp" />
+    <ClCompile Include="boj1874.cpp" />
+    <ClCompile Include="boj18790.cpp" />
+    <ClCompile Include="boj18808.cpp" />
+    <ClCompile Include="boj13460.cpp" />
+    <ClCompile Include="boj1904.cpp" />
+    <ClCompile Include="boj19238.cpp" />
+    <ClCompile Include="boj1966.cpp" />
+    <ClCompile Include="boj2012.cpp" />
+    <ClCompile Include="boj2210.cpp" />
+    <ClCompile Include="boj2224.cpp" />
+    <ClCompile Include="boj2580.cpp" />
+    <ClCompile Include="boj2800.cpp" />
+    <ClCompile Include="boj2931.cpp" />
+    <ClCompile Include="boj4358.cpp" />
+    <ClCompile Include="boj5022.cpp" />
+    <ClCompile Include="boj5397.cpp" />
+    <ClCompile Include="boj5557.cpp" />
+    <ClCompile Include="boj6326.cpp" />
+    <ClCompile Include="boj9084.cpp" />
+    <ClCompile Include="boj2133.cpp" />
+    <ClCompile Include="boj2294-2.cpp" />
+    <ClCompile Include="boj2346.cpp" />
+    <ClCompile Include="boj3079.cpp" />
+    <ClCompile Include="boj3190-3.cpp" />
+    <ClCompile Include="boj4796-1.cpp" />
+    <ClCompile Include="boj4949.cpp" />
+    <ClCompile Include="boj4991.cpp" />
+    <ClCompile Include="boj7576-2.cpp" />
+    <ClCompile Include="boj1074.cpp" />
+    <ClCompile Include="boj9328.cpp" />
+    <ClCompile Include="boj9376.cpp" />
+    <ClCompile Include="boj1890.cpp" />
+    <ClCompile Include="boj1929.cpp" />
+    <ClCompile Include="boj1935.cpp" />
+    <ClCompile Include="boj1939.cpp" />
+    <ClCompile Include="boj1946.cpp" />
+    <ClCompile Include="boj1965.cpp" />
+    <ClCompile Include="boj1978.cpp" />
+    <ClCompile Include="boj2042.cpp" />
+    <ClCompile Include="boj2056.cpp" />
+    <ClCompile Include="boj2075.cpp" />
+    <ClCompile Include="boj2110.cpp" />
+    <ClCompile Include="boj2146.cpp" />
+    <ClCompile Include="boj2174.cpp" />
+    <ClCompile Include="boj2193.cpp" />
+    <ClCompile Include="boj2211.cpp" />
+    <ClCompile Include="boj2217.cpp" />
+    <ClCompile Include="boj2232.cpp" />
+    <ClCompile Include="boj2455.cpp" />
+    <ClCompile Include="boj2533.cpp" />
+    <ClCompile Include="boj2661.cpp" />
+    <ClCompile Include="boj2231.cpp" />
+    <ClCompile Include="boj2294.cpp" />
+    <ClCompile Include="boj2503.cpp" />
+    <ClCompile Include="boj2512.cpp" />
+    <ClCompile Include="boj2573.cpp" />
+    <ClCompile Include="boj2578.cpp" />
+    <ClCompile Include="boj2583.cpp" />
+    <ClCompile Include="boj2606.cpp" />
+    <ClCompile Include="boj2638.cpp" />
+    <ClCompile Include="boj2644.cpp" />
+    <ClCompile Include="boj2662.cpp" />
+    <ClCompile Include="boj2665.cpp" />
+    <ClCompile Include="boj2667.cpp" />
+    <ClCompile Include="boj2668.cpp" />
+    <ClCompile Include="boj2776.cpp" />
+    <ClCompile Include="boj2875.cpp" />
+    <ClCompile Include="boj2884.cpp" />
+    <ClCompile Include="boj2979.cpp" />
+    <ClCompile Include="boj3020.cpp" />
+    <ClCompile Include="boj3085.cpp" />
+    <ClCompile Include="boj3184.cpp" />
+    <ClCompile Include="boj3190.cpp" />
+    <ClCompile Include="boj4179.cpp" />
+    <ClCompile Include="boj4811.cpp" />
+    <ClCompile Include="boj4889.cpp" />
+    <ClCompile Include="boj4929.cpp" />
+    <ClCompile Include="boj5014.cpp" />
+    <ClCompile Include="boj5213.cpp" />
+    <ClCompile Include="boj1932.cpp" />
+    <ClCompile Include="boj5569.cpp" />
+    <ClCompile Include="boj6497.cpp" />
+    <ClCompile Include="boj7785.cpp" />
+    <ClCompile Include="boj8895.cpp" />
+    <ClCompile Include="boj8911.cpp" />
+    <ClCompile Include="boj9205.cpp" />
+    <ClCompile Include="boj9251.cpp" />
+    <ClCompile Include="boj9465.cpp" />
+    <ClCompile Include="boj9518.cpp" />
+    <ClCompile Include="boj9944.cpp" />
+    <ClCompile Include="grm43070.cpp" />
+    <ClCompile Include="grm43230.cpp" />
+    <ClCompile Include="grm43269.cpp" />
+    <ClCompile Include="grm49076.cpp" />
+    <ClCompile Include="grm49077.cpp" />
+    <ClCompile Include="grm49091.cpp" />
+    <ClCompile Include="grm49104.cpp" />
+    <ClCompile Include="prg12899.cpp" />
+    <ClCompile Include="prg12907.cpp" />
+    <ClCompile Include="prg12914.cpp" />
+    <ClCompile Include="prg12952.cpp" />
+    <ClCompile Include="prg12978.cpp" />
+    <ClCompile Include="prg12980.cpp" />
+    <ClCompile Include="prg12987.cpp" />
+    <ClCompile Include="prg17687.cpp" />
+    <ClCompile Include="prg42488.cpp" />
+    <ClCompile Include="prg42578.cpp" />
+    <ClCompile Include="prg42583.cpp" />
+    <ClCompile Include="prg42586.cpp" />
+    <ClCompile Include="prg42587.cpp" />
+    <ClCompile Include="prg42626.cpp" />
+    <ClCompile Include="PRG17679.cpp" />
+    <ClCompile Include="prg42627.cpp" />
+    <ClCompile Include="prg42628.cpp" />
+    <ClCompile Include="prg42746.cpp" />
+    <ClCompile Include="prg42747.cpp" />
+    <ClCompile Include="prg42839.cpp" />
+    <ClCompile Include="prg42841.cpp" />
+    <ClCompile Include="prg42842.cpp" />
+    <ClCompile Include="prg42860.cpp" />
+    <ClCompile Include="prg42861.cpp" />
+    <ClCompile Include="prg42884.cpp" />
+    <ClCompile Include="prg42885.cpp" />
+    <ClCompile Include="prg42886.cpp" />
+    <ClCompile Include="prg42888.cpp" />
+    <ClCompile Include="prg42890.cpp" />
+    <ClCompile Include="prg42895.cpp" />
+    <ClCompile Include="prg42897.cpp" />
+    <ClCompile Include="prg42898.cpp" />
+    <ClCompile Include="prg43105.cpp" />
+    <ClCompile Include="prg43162.cpp" />
+    <ClCompile Include="prg43163.cpp" />
+    <ClCompile Include="prg43164.cpp" />
+    <ClCompile Include="prg43165.cpp" />
+    <ClCompile Include="prg43237.cpp" />
+    <ClCompile Include="prg49189.cpp" />
+    <ClCompile Include="prg49191.cpp" />
+    <ClCompile Include="prg49993.cpp" />
+    <ClCompile Include="prg49994.cpp" />
+    <ClCompile Include="prg60058.cpp" />
+    <ClCompile Include="prg60060.cpp" />
+    <ClCompile Include="prg62048.cpp" />
+    <ClCompile Include="prg62049.cpp" />
+    <ClCompile Include="prglv1-1.cpp" />
+    <ClCompile Include="prglv1-2.cpp" />
+    <ClCompile Include="prglv2-1.cpp" />
+    <ClCompile Include="prglv2-2.cpp" />
+    <ClCompile Include="prglv3-1.cpp" />
+    <ClCompile Include="prglv3-2.cpp" />
+    <ClCompile Include="swe1244.cpp" />
+    <ClCompile Include="swe1808.cpp" />
+    <ClCompile Include="swe2117.cpp" />
+    <ClCompile Include="swe3347.cpp" />
+    <ClCompile Include="swe3459.cpp" />
+    <ClCompile Include="swe4008.cpp" />
+    <ClCompile Include="swe2819.cpp" />
+    <ClCompile Include="swe5432.cpp" />
+    <ClCompile Include="swe5643.cpp" />
+    <ClCompile Include="swe6109.cpp" />
+    <ClCompile Include="swe8822.cpp" />
+    <ClCompile Include="swe8998.cpp" />
+    <ClCompile Include="t14.cpp" />
+    <ClCompile Include="t15.cpp" />
+    <ClCompile Include="t16.cpp" />
+    <ClCompile Include="prg42579.cpp" />
+    <ClCompile Include="boj6118.cpp" />
+    <ClCompile Include="boj1010.cpp" />
+    <ClCompile Include="boj9461.cpp" />
+    <ClCompile Include="boj1120.cpp" />
   </ItemGroup>
 </Project>
