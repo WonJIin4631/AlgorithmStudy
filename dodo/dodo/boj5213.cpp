@@ -1,202 +1,139 @@
 #include<iostream>
 #include<queue>
-#include<vector>
 #include<algorithm>
-#include<string>
-#include<string.h>
+#include<vector>
 using namespace std;
-/*
-도미노 타일은 2조각으로 나누어져있음
-1~6사이 숫자가 적혀있음
-타일은 N줄로 놓여져 있고, 홀수 중에는 N개, 짝수는 N-1타일이 놓여져있음
-다른 타일로넘어갈려면 인접, 숫자가 같아야 됨
-마지막줄 마지막 타일로 이동하는 가장 짧은 경로
-만약 첫타일에서 이동할수 없는경우 첫줄의 가장 큰 번호를 가지고 있는 타일로 이동
 
-N*2N 2차원 배열
-홀수는 1부터,짝수는 2부터 시작
-BFS 탐색하면서 이동했던 거리를 기록
-타일의 순서대로 출력
-*/
-int map[502][502] = { 0 };
-int visit[502][502] = { 0 };
 int N;
-int ans = 987654321;
-vector<string> ans_s;
-int dx[] = { 0,-1,1 };
-int dy[] = { 1,0,0 };
-// 입력
-void input() {
-	cin >> N;
-	int x = 0;
-	int y = 0;
-	for (int i = 0; i < (N*N) - (N / 2); i++) {
-		cin >> map[y][x] >> map[y][x + 1];
-		x += 2;
-		if (y % 2 == 0) {
-			if (x == (2 * N)) {
-				y++;
-				x = 1;
-			}
-		}
-		else if (y % 2 != 0) {
-			if (x == (2 * N) - 1) {
-				y++;
-				x = 0;
-			}
-		}
+int map[502][1002] = { 0 };
+bool visit[502][1002] = { 0 };
+int prevIdx[249751] = { 0 };
+int dx[] = { 0,0,-1,1 };
+int dy[] = { -1,1,0,0 };
+struct Info {
+	int x; int y;
+};
+bool isIn(int x, int y) {
+	if (y % 2 == 0) {
+		if (x == 1 || x == N * 2)
+			return false;
 	}
+	return x >= 1 && x <= N * 2 && y >= 1 && y <= N;
 }
-// 같은 타일에 있는지
-bool c_tile(int x, int y, int nx, int ny) {
-	if (ny == y) {
+bool checkSameTile(int x, int y, int nx, int ny) {
+	int minX = min(x, nx);
+	if (y == ny) {
 		if (y % 2 == 0) {
-			if (abs(nx - x) == 1) {
-				int l = min(nx, x);
-				if (l % 2 == 0)
-					return true;
-			}
+			if (minX % 2 == 0)
+				return true;
 		}
 		else {
-			if (abs(nx - x) == 1) {
-				int l = min(nx, x);
-				if (l % 2 == 1)
-					return true;
-			}
+			if (minX % 2 == 1)
+				return true;
 		}
 	}
 	return false;
 }
-
-int c_tileNum(int x, int y) {
-	int num = 0;
-	if (y != 0) {
-		for (int i = 0; i < y; i++) {
-			if ((i % 2) == 0)
-				num += N;
-			else
-				num += N - 1;
-		}
-		if (y % 2 == 0) {
-			num += (x / 2) + 1;
-		}
-		else {
-			num += ((x - 1) / 2) + 1;
-		}
+int getTileIdx(int x, int y) {
+	int idx = 0;
+	for (int i = 1; i < y; i++) {
+		if (i % 2 == 0)
+			idx += N - 1;
+		else
+			idx += N;
 	}
-	else {
-		num = x / 2 + 1;
-	}
-	return num;
-}
-pair<int, int> get_tile(int x, int y) {
 	if (y % 2 == 0) {
-		if ((x % 2) == 1) {
-			return{ x - 1,y };
-		}
-		else {
-			return{ x + 1,y };
-		}
+		idx += x / 2;
 	}
 	else {
-		if ((x % 2) == 1) {
-			return{ x + 1,y };
+		for (int i = 0; i < x; i += 2) {
+			idx++;
+		}
+	}
+	return idx;
+}
+void init() {
+	cin >> N;
+	int l, r;
+	int h = 1, w = 1;
+	for (int i = 0; i < (N*N) - (N / 2); i++) {
+		cin >> l >> r;
+		map[h][w++] = l;
+		map[h][w++] = r;
+		if (h % 2 == 1) {
+			if (w == N * 2 + 1) {
+				h++;
+				w = 2;
+			}
 		}
 		else {
-			return{ x - 1,y };
-
+			if (w == N * 2) {
+				h++;
+				w = 1;
+			}
 		}
 	}
 }
-bool solve(int y, int x, string s) {
-	queue < pair<pair<int, int>, pair<int, string>>> q;
-	bool flag = false;
-	visit[y][x] = 1;
-	visit[y][x + 1] = 1;
-	q.push(make_pair(make_pair(x, y), make_pair(1, s)));
-	q.push(make_pair(make_pair(x + 1, y), make_pair(1, s)));
-	while (!q.empty()) {
-		int cx = q.front().first.first;
-		int cy = q.front().first.second;
-		int cnt = q.front().second.first;
-		string val = q.front().second.second;
-		q.pop();
-		int curTile = c_tileNum(cx, cy);
-		ans_s[curTile] = val;
-		if (cy == N - 1) {
-			if (N % 2 == 1) {
-				if ((cx == (2 * N) - 2) || (cx == (2 * N) - 1)) {
-					ans = min(ans, cnt);
-					flag = true;
-					continue;
-				}
-			}
-			else {
-				if ((cx == (2 * N) - 3) || (cx == (2 * N) - 2)) {
-					ans = min(ans, cnt);
-					flag = true;
-					continue;
-				}
-			}
-		}
-		for (int i = 0; i < 3; i++) {
-			int nx = cx + dx[i];
-			int ny = cy + dy[i];
-			if (nx >= 0 && nx < (2 * N) && ny >= 0 && ny < N) {
-				if (map[ny][nx] != 0) {
-					if (map[ny][nx] == map[cy][cx]) {
-						if (visit[ny][nx] == 0) {
-							visit[ny][nx] = c_tileNum(cx, cy);
-							int can = c_tileNum(nx, ny);
-							pair<int, int> nnval;
-							nnval = get_tile(nx, ny);
-							visit[nnval.second][nnval.first] = c_tileNum(cx, cy);
-							q.push(make_pair(make_pair(nx, ny), make_pair(cnt + 1, val + " " + to_string(can))));
-							q.push(make_pair(nnval, make_pair(cnt + 1, val + " " + to_string(can))));
 
+void moveStart() {
+	queue<Info> q;
+	prevIdx[1] = 1;
+	visit[1][1] = true;
+	q.push({ 1,1 });
+	while (!q.empty()) {
+		Info cur = q.front();
+		q.pop();
+		int cIdx = getTileIdx(cur.x, cur.y);
+		for (int d = 0; d < 4; d++) {
+			int nx = cur.x + dx[d];
+			int ny = cur.y + dy[d];
+			if (isIn(nx, ny)) {
+				if (checkSameTile(cur.x, cur.y, nx, ny)) {
+					if (visit[ny][nx] == false) {
+						visit[ny][nx] = true;
+						q.push({ nx, ny });
+					}
+				}
+				else {
+					if (map[cur.y][cur.x] == map[ny][nx]) {
+						int nIdx = getTileIdx(nx, ny);
+						if (prevIdx[nIdx] == 0) {
+							prevIdx[nIdx] = cIdx;
+							q.push({ nx,ny });
 						}
 					}
 				}
 			}
 		}
 	}
-	if (!flag)
-		return false;
-	else
-		return true;
+}
+void show() {
+	vector<int> ans;
+	bool flag = false;
+	for (int i = (N*N) - (N / 2); i >= 1; i--) {
+		if (prevIdx[i] != 0) {
+			int cur = i;
+			flag = true;
+			while (cur!=1){
+				ans.push_back(cur);
+				cur = prevIdx[cur];
+			}
+		}
+		if (flag)
+			break;
+	}
+	ans.push_back(1);
+	cout << ans.size() << '\n';
+	for (int i = ans.size()-1; i >= 0; i--) {
+		cout << ans[i] << ' ';
+	}
 }
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	input();
-	ans_s.resize((N*N) - (N / 2) + 1);
-
-	if (solve(0, 0, "1")) {
-		cout << ans << '\n';
-		cout << ans_s[(N*N) - (N / 2)] << '\n';
-	}
-	else {
-		int lastTile;
-		bool flag = false;
-		for (int i = N - 1; i >= 0; i--) {
-			for (int j = 2 * N - 1; j >= 0; j--) {
-				if (visit[i][j] != 0) {
-					lastTile = c_tileNum(j, i);
-					flag = true;
-					break;
-				}
-			}
-			if (flag)
-				break;
-		}
-		int cnt = 1;
-		for (int i = 0; i < ans_s[lastTile].length(); i++) {
-			if (ans_s[lastTile][i] == ' ')
-				cnt++;
-		}
-		cout << cnt << '\n';
-		cout << ans_s[lastTile] << '\n';
-	}
+	init();
+	moveStart();
+	show();
 	return 0;
 }
