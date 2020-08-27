@@ -1,52 +1,62 @@
-#include<iostream>
-#include<cstdio>
-#include<vector>
-#include<algorithm>
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#define MAX_N 100000
 using namespace std;
-#define MAX 100005
-
-int n, m, d;
-vector<int> node[MAX];
-int dept[MAX], parent[MAX][17];
-void dfs(int now, int cnt) {
-	dept[now] = cnt++;
-	for (int i = 1; i <= d; i++)
-		parent[now][i] = parent[parent[now][i - 1]][i - 1];
-	for (auto val : node[now]) {
-		if (!dept[val]) {
-			parent[val][0] = now;
-			dfs(val, cnt);
+int n, m, par[MAX_N + 1][21], x, y, visited[MAX_N + 1], d[MAX_N + 1];
+vector<int> vt[MAX_N+1];
+void dfs(int here, int depth) {
+	visited[here] = true;
+	d[here] = depth;
+	for (int there : vt[here]) {
+		if (visited[there])
+			continue;
+		par[there][0] = here;
+		dfs(there, depth + 1);
+	}
+}
+void f() {
+	for (int j = 1; j < 21; j++) {
+		for (int i = 1; i <= n; i++) {
+			par[i][j] = par[par[i][j - 1]][j - 1];
 		}
 	}
 }
-int main() {
-	int i, a, b;
-	scanf("%d", &n);
-	for (d = 1; (1 << d) <= n; d++);
-	d--;
-	cout << d << '\n';
-	while (--n) {
-		scanf("%d %d", &a, &b);
-		node[a].push_back(b);
-		node[b].push_back(a);
+int lca(int x, int y) {
+	if (d[x] > d[y])
+		swap(x, y);
+	for (int i = 20; i >= 0; i--) {
+		if (d[y] - d[x] >= (1 << i))
+			y = par[y][i];
 	}
-	dfs(1, 1);
+	if (x == y)return x;
+	for (int i = 20; i >= 0; i--) {
+		if (par[x][i] != par[y][i]) {
+			x = par[x][i];
+			y = par[y][i];
+		}
+	}
+	return par[x][0];
+}
+int main() {
+	scanf("%d", &n);
+	for (int i = 0; i < n - 1; i++) {
+		scanf("%d%d", &x, &y);
+		vt[x].push_back(y);
+		vt[y].push_back(x);
+	}
+	dfs(1, 0);
+	f();
 	scanf("%d", &m);
 	while (m--) {
-		scanf("%d %d", &a, &b);
-		if (dept[a] < dept[b])
-			swap(a, b);
-		for (i = d; i >= 0; i--)
-			if (dept[b] <= dept[parent[a][i]])
-				a = parent[a][i];
-		if (a == b) {
-			printf("%d\n", a);
-			continue;
+		scanf("%d%d", &x, &y);
+		printf("%d\n", lca(x, y));
+	}
+	for (int j = 0; j < 21; j++) {
+		for (int i = 1; i <= n; i++) {
+			printf("%d ", par[i][j]);
 		}
-		for (i = d; i >= 0; i--)
-			if (parent[a][i] != parent[b][i])
-				a = parent[a][i], b = parent[b][i];
-		printf("%d\n", parent[a][0]);
+		printf("\n");
 	}
 	return 0;
 }
