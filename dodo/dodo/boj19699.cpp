@@ -40,8 +40,12 @@ int main() {
 		cin >> numList[i];
 	}
 	solve(0, 0, 0);
-	for (auto idx : Set) {
-		cout << idx << ' ';
+	if (Set.size() == 0)
+		cout << -1 << '\n';
+	else {
+		for (auto idx : Set) {
+			cout << idx << ' ';
+		}
 	}
 	return 0;
 }
