@@ -15,7 +15,7 @@ int main() {
 				break;
 			if (i == j*j)
 				dp[i] = 1;
-			if (i - j*j >= 0)
+			else if (i - j*j >= 0)
 				dp[i] = min(dp[i], dp[i-j*j]+1);
 		}
 	}
