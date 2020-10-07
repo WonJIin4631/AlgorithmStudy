@@ -434,5 +434,7 @@
     <ClCompile Include="priorityQueueTest.cpp" />
     <ClCompile Include="boj17836-2.cpp" />
     <ClCompile Include="boj14226-2.cpp" />
+    <ClCompile Include="boj15686-2.cpp" />
+    <ClCompile Include="boj1783.cpp" />
   </ItemGroup>
 </Project>
