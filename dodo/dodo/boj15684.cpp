@@ -5,7 +5,7 @@ using namespace std;
 int N, H, M;
 int line[11][31] = { 0 };
 
-int ans = 987654321;
+int ans = 4;
 bool flag = false;
 bool move_line() {
 	bool check = true;
@@ -57,7 +57,7 @@ int main() {
 		line[b][a] = 1;
 	}
 	DFS(1, 0);
-	if (ans == 987654321)
+	if (ans == 4)
 		ans = -1;
 	cout << ans << '\n';
 	return 0;
