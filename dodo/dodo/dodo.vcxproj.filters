@@ -441,5 +441,6 @@
     <ClCompile Include="boj1235.cpp" />
     <ClCompile Include="boj17144-2.cpp" />
     <ClCompile Include="boj19238-2.cpp" />
+    <ClCompile Include="boj19236-2.cpp" />
   </ItemGroup>
 </Project>
