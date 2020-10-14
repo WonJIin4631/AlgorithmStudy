@@ -1,18 +1,7 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
-#include<string.h>
 using namespace std;
-/*
-R 연산 모든 행에대해서 정렬 (행>= 열) 일때
-C 연산 모든 열에 대해서 정렬 (행 <열) 일때
-
-해당 수가 등장횟수 오름차순 같으면 수가 커지는 오름차순
-수, 등장횟수 순으로 작성
-행열 크기가 100넘으면 버린다.
-최대 행크기와, 최대 열크기 값을 가지고있어 계속 비교하면서 연산을 결정한다.
-숫자배열에 넣어서 갯수와 값을 pii 소팅으로 다시 값넣기
-*/
 
 int map[103][103] = { 0 };
 int r, c, k;
@@ -57,7 +46,7 @@ int main() {
 				sort(v.begin(), v.end());
 				int idx = 1;
 				int sz = v.size() * 2;
-				tempC = max(tempC, sz);
+				tempC = max(tempC,sz);
 				for (int j = 0; j < v.size(); j++) {
 					map[i][idx++] = v[j].second;
 					map[i][idx++] = v[j].first;
@@ -100,16 +89,6 @@ int main() {
 			}
 			maxR = tempR;
 		}
-		/*
-		cout << "--------"<<time<<"-----------\n";
-		cout << maxR << ' ' << maxC << '\n';
-		for (int i = 1; i <= maxR; i++) {
-			for (int j = 1; j <= maxC; j++) {
-				cout << map[i][j] << ' ';
-			}
-			cout << '\n';
-		}
-		*/
 		time++;
 	}
 	cout << time << '\n';
