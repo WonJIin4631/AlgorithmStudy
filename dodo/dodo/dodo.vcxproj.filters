@@ -450,5 +450,6 @@
     <ClCompile Include="swea2117-2.cpp" />
     <ClCompile Include="boj15657.cpp" />
     <ClCompile Include="boj2565.cpp" />
+    <ClCompile Include="boj20055.cpp" />
   </ItemGroup>
 </Project>
