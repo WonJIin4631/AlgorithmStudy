@@ -8,10 +8,11 @@ int dp[1001] = { 0 };
 int ans = 0;
 int main() {
 	cin >> N;
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; i++) {
 		cin >> numList[i];
-	dp[0] = numList[0];
-	//ans = dp[0];
+		dp[i] = numList[i];
+	}
+	ans = dp[0];
 	for (int i = 1; i < N; i++) {
 		for (int j = 0; j < i; j++) {
 			if (numList[i] > numList[j]) {
